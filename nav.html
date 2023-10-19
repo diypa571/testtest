@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<style>
+ 
+
+.pw_nav {
+  overflow: hidden;
+  background-color: #2A9F55;
+}
+
+
+.pw_nav a {
+  float: left;
+  display: block;
+  color: #0e0c0c;
+  text-align: center;
+  padding:20px;
+  text-decoration: none;
+    background-color: #2A9F55;
+}
+
+.pw_nav a:hover {
+  color: black;
+}
+
+.pw_nav a.active {
+  background-color: #2A9F55;
+  color: white;
+}
+
+.pw_nav .bar {
+  display: none;
+}
+
+
+#pw_nav_change {
+  display: none;
+}
+
+
+#pw_nav_change + label .bar {
+  display: block;
+}
+
+
+#pw_nav_change {
+    display: none;
+}
+
+.bar {
+  display: none;  
+  position: absolute;
+  top: 10px;
+  right: 0;
+  padding: 20px;
+}
+
+#pw_nav_change + label .bar {
+  display: none;
+}
+
+@media screen and (max-width: 750px) {
+  /*
+  not(:first-child), bara första child kommer exkluderas, resten kommer att döljas.  
+  */
+  .pw_nav a:not(:first-child) {
+    display: none;
+  }
+  m,
+  #pw_nav_change + label .bar {
+    display: block;
+    float: right;
+  }
+
+  #pw_nav_change:checked ~ .pw_nav a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+} 
+
+</style>
+</head>
+<body>
+
+  <nav class="pw_nav" >
+
+<input type="checkbox" id="pw_nav_change">
+<!-- Label for the checkbox -->
+<label for="pw_nav_change" class="pw_nav">
+  <a href="#" class="active">Pixel</a>
+  <a href="#">Startsida</a>
+  <a href="#">Lediga jobb</a>
+  <a href="#">Näringsliv</a>
+  <a href="#">Barn & Utbildning</a>
+  <a href="#">Kommun & Politik</a>
+  <span class="bar"> <i class="fa-solid fa-bars"></i> </span>
+</label>
+</nav>
+
+
+<br><br><br>
+
+<div style="padding-left:16px">
+  <h2>Pixel Wizards</h2>
+
+</div>
+
+<div style="padding-left:16px">
+  <h2>Responsiv navigation</h2>
+
+</div>
+
+</body>
+</html>
